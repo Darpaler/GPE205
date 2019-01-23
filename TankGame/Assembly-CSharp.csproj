@@ -62,6 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\TankData.cs" />
+    <Compile Include="Assets\Scripts\TankMotor.cs" />
+    <Compile Include="Assets\Scripts\TestController.cs" />
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
       <HintPath>C:/Users/Darin/My Repositories/GPE205/TankGame/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Timeline;
 
 public class TankMotor : MonoBehaviour {
 
@@ -31,6 +32,11 @@ public class TankMotor : MonoBehaviour {
     public void Rotate(float speed)     //Turn Left/Right
     {
         tf.Rotate(Vector3.up * speed * Time.deltaTime);        //Turn by how fast you are per second
+    }
+
+    public void Shoot(GameObject shell)                 //Shoot a Shell
+    {
+        Instantiate(shell);
     }
 
 }

@@ -33,17 +33,25 @@ public class InputController: MonoBehaviour
                 {
                     motor.Move(data.moveSpeed);
                 }
+
                 if (Input.GetKey(KeyCode.DownArrow))
                 {
-                    motor.Move(-data.moveSpeed);
+                    motor.Move(-data.reverseSpeed);
                 }
+
                 if (Input.GetKey(KeyCode.RightArrow))
                 {
                     motor.Rotate(data.turnSpeed);
                 }
+
                 if (Input.GetKey(KeyCode.LeftArrow))
                 {
                     motor.Rotate(-data.turnSpeed);
+                }
+
+                if (Input.GetKeyUp(KeyCode.Keypad0))
+                {
+                    motor.Shoot(data.shell);
                 }
                 break;
 
@@ -63,6 +71,10 @@ public class InputController: MonoBehaviour
                 if (Input.GetKey(KeyCode.A))
                 {
                     motor.Rotate(-data.turnSpeed);
+                }
+                if (Input.GetKeyUp(KeyCode.Space))
+                {
+                    motor.Shoot(data.shell);
                 }
                 break;
         }

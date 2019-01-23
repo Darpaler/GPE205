@@ -168,7 +168,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  reverseSpeed: 1.5
   turnSpeed: 180
+  shell: {fileID: 1142635882251996, guid: c35750661f56c04468e4a237a02ea171, type: 2}
 --- !u!114 &114652151270263660
 MonoBehaviour:
   m_ObjectHideFlags: 1

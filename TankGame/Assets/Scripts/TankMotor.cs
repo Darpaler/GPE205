@@ -34,9 +34,9 @@ public class TankMotor : MonoBehaviour {
         tf.Rotate(Vector3.up * speed * Time.deltaTime);        //Turn by how fast you are per second
     }
 
-    public void Shoot(GameObject shell)                 //Shoot a Shell
+    public void Shoot(GameObject shell, Vector3 offset)                 //Shoot a Shell
     {
-        Instantiate(shell);
+        Instantiate(shell, tf.position + (tf.forward * offset.x) + (tf.up * offset.y), tf.rotation);
     }
 
 }

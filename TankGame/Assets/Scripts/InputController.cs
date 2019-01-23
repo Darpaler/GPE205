@@ -51,7 +51,7 @@ public class InputController: MonoBehaviour
 
                 if (Input.GetKeyUp(KeyCode.Keypad0))
                 {
-                    motor.Shoot(data.shell);
+                    motor.Shoot(data.shell, data.shootOffset);
                 }
                 break;
 
@@ -74,7 +74,7 @@ public class InputController: MonoBehaviour
                 }
                 if (Input.GetKeyUp(KeyCode.Space))
                 {
-                    motor.Shoot(data.shell);
+                    motor.Shoot(data.shell, data.shootOffset);
                 }
                 break;
         }

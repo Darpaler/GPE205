@@ -10,13 +10,7 @@ public class TankData : MonoBehaviour {
     public float turnSpeed = 180;                                  //Turn Speed in degrees per second
     public GameObject shell;                                       //Current Weapon
     public Vector2 shootOffset = new Vector2(0.8f, 0.25f);         //Offset From Center (Horizontal, Vertical)
-
-    // Use this for initialization
-    void Start () {	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public int hp;                                                 //Current Hit Points
+    public int pointValue;                                         //How Many Points This Tank's Worth
+    public int score;                                              //How Many Points This Tank Has
 }

@@ -476,5 +476,8 @@ MonoBehaviour:
   moveSpeed: 3
   reverseSpeed: 1.5
   turnSpeed: 180
-  shell: {fileID: 1142635882251996, guid: c35750661f56c04468e4a237a02ea171, type: 2}
+  shell: {fileID: 1233647468666552, guid: c35750661f56c04468e4a237a02ea171, type: 2}
   shootOffset: {x: 0.8, y: 0.25}
+  hp: 3
+  pointValue: 3
+  score: 0

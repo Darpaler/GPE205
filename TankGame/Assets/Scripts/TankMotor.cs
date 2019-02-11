@@ -36,6 +36,30 @@ public class TankMotor : MonoBehaviour {
         tf.Rotate(Vector3.up * speed * Time.deltaTime);        //Turn By How Fast You Are Per Second
     }
 
+    public bool RotateTowards(Vector3 target, float speed)
+    {
+        //Variables
+        Vector3 vectorToTarget;     //The vector to where our target is
+
+        //Find the difference between us and out target
+        vectorToTarget = target - tf.position;
+
+        // Find the Quaternion that looks down that vector
+        Quaternion targetRotation = Quaternion.LookRotation(vectorToTarget);
+
+        // If that is the direction we are already looking, we don't need to turn!
+        if (targetRotation == tf.rotation)
+        {
+            return false;
+        }
+
+        //Else, rotate
+        tf.rotation = Quaternion.RotateTowards(tf.rotation, targetRotation, speed * Time.deltaTime);
+
+        // We rotated, so return true
+        return true;
+    }
+
     public void Shoot(GameObject shell, Vector3 offset)        //Shoot A Shell
     {
         if (Time.time >= nextShotTime)                         //If You Waited The Reload Time

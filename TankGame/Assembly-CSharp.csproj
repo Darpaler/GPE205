@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\AIController.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\InputController.cs" />
+    <Compile Include="Assets\Scripts\Rotate.cs" />
     <Compile Include="Assets\Scripts\SampeAI2.cs" />
     <Compile Include="Assets\Scripts\SampleAIController.cs" />
     <Compile Include="Assets\Scripts\Shell.cs" />

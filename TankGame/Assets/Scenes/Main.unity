@@ -3265,6 +3265,16 @@ Prefab:
       propertyPath: m_Name
       value: TankAI (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114787812599859814, guid: 8a99f06926885a5438364651fefaa207,
+        type: 2}
+      propertyPath: moveSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787812599859814, guid: 8a99f06926885a5438364651fefaa207,
+        type: 2}
+      propertyPath: reverseSpeed
+      value: 0.75
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114272682142767958, guid: 8a99f06926885a5438364651fefaa207, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 8a99f06926885a5438364651fefaa207, type: 2}
@@ -3286,7 +3296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackMode: 0
-  target: {fileID: 0}
+  target: {fileID: 1514503572}
 --- !u!4 &740391090 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4650872538169840, guid: 68b2a400bae9e3a4eabe60a70aed1cbf,

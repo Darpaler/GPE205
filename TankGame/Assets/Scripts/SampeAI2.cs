@@ -26,6 +26,15 @@ public class SampeAI2 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+        switch (attackMode)
+        {
+            case AttackMode.Chase:
+                // Rotate towards the target
+                motor.RotateTowards(target.position, data.turnSpeed);
+                // Move forward
+                motor.Move(data.moveSpeed);
+                break;
+        }
+    }
 }

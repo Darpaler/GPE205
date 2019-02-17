@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-    public static GameManager instance;
+    //Variables
+    public static GameManager instance;     //Singleton
+    public InputController player;          //Player
+
 
     // Runs before any Start() functions run
     void Awake()

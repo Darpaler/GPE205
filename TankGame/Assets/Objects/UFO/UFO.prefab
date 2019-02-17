@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 114503001365169700}
   - component: {fileID: 114592409118768490}
   - component: {fileID: 114652151270263660}
+  - component: {fileID: 114232032867253880}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -219,6 +220,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1900167071639710}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114232032867253880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1580762510331808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940b40a017db161458f4b73e2e70c096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 10
+  decayPerFrameDraw: 1
 --- !u!114 &114265505040536588
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -242,6 +256,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18af065243a7bff42bf09defacaa8c3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveVolume: 5
+  turnVolume: 2.5
+  shootVolume: 10
 --- !u!114 &114592409118768490
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 114395696055477418}
   - component: {fileID: 114916156565958968}
   - component: {fileID: 114376426697639784}
+  - component: {fileID: 114756726647885896}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -223,7 +224,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400010}
@@ -462,6 +463,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18af065243a7bff42bf09defacaa8c3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveVolume: 5
+  turnVolume: 2.5
+  shootVolume: 10
+--- !u!114 &114756726647885896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940b40a017db161458f4b73e2e70c096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 0
+  decayPerFrameDraw: 1
 --- !u!114 &114916156565958968
 MonoBehaviour:
   m_ObjectHideFlags: 1

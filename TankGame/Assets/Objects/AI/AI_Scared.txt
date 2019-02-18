@@ -1,0 +1,1 @@
+This tank will run away whenever the player gets too close.

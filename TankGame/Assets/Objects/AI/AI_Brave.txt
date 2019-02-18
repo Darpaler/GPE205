@@ -1,0 +1,1 @@
+This tank will never flee from the player, and chases them longer.

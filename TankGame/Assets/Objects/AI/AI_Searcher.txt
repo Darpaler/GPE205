@@ -1,0 +1,1 @@
+This tank will patrol through waypoints, and chase the player on sight. It retreats at half health and heals up before going back to the waypoints.

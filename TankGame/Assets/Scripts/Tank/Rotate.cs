@@ -20,7 +20,7 @@ public class Rotate : MonoBehaviour {
 	void Update () {
 
         //Rotate our object
-        tf.Rotate(0, rotateSpeed * Time.deltaTime, 0, Space.World);
+        tf.Rotate(0, 0, rotateSpeed * Time.deltaTime, Space.Self);
 
 	}
 }

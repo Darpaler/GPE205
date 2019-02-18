@@ -62,16 +62,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AI\AIController.cs" />
+    <Compile Include="Assets\Scripts\AI\AISample3.cs" />
     <Compile Include="Assets\Scripts\AI\SampeAI2.cs" />
     <Compile Include="Assets\Scripts\AI\SampleAIController.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Player\InputController.cs" />
-    <Compile Include="Assets\Scripts\Player\ShellData.cs" />
-    <Compile Include="Assets\Scripts\Player\TankData.cs" />
     <Compile Include="Assets\Scripts\Shells\Shell.cs" />
+    <Compile Include="Assets\Scripts\Shells\ShellData.cs" />
     <Compile Include="Assets\Scripts\Tank\NoiseMaker.cs" />
     <Compile Include="Assets\Scripts\Tank\Rotate.cs" />
+    <Compile Include="Assets\Scripts\Tank\TankData.cs" />
     <Compile Include="Assets\Scripts\Tank\TankMotor.cs" />
+    <None Include="Assets\Objects\AI\AI_Brave.txt" />
+    <None Include="Assets\Objects\AI\AI_Watcher.txt" />
+    <None Include="Assets\Objects\AI\AI_Searcher.txt" />
+    <None Include="Assets\Objects\AI\AI_Scared.txt" />
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
       <HintPath>C:/Users/Darin/My Repositories/GPE205/TankGame/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>

@@ -5,6 +5,12 @@ using UnityEngine;
 public class NoiseMaker : MonoBehaviour {
 
     //Variables
+    [Header("Settings")]
+    public float moveVolume;            //How loud our movement is
+    public float turnVolume;            //How loud our turning is
+    public float shootVolume;           //How loud our shooting is
+
+    [Header("Volume")]
     public float volume;                //How far away the tank can be heard by AI
     public float decayPerFrameDraw;     //How much the volume decreases per frame
 

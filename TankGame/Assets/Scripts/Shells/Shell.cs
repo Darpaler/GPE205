@@ -24,12 +24,6 @@ public class Shell : MonoBehaviour {
         //Destroy Shell After Time
         Destroy(gameObject, data.timeTillDestroy);
     }
-	
-	// Update is called once per frame
-	void Update ()
-    {
-
-    }
 
     void OnCollisionEnter(Collision collision)
     {

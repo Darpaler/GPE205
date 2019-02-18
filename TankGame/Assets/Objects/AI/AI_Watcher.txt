@@ -1,0 +1,1 @@
+This tank sits in one spot and watches for the player. It will chase them on sight, and run away to heal at half health.

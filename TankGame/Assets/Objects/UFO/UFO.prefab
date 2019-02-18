@@ -234,7 +234,7 @@ MonoBehaviour:
   moveVolume: 0
   turnVolume: 0
   shootVolume: 0
-  volume: 10
+  volume: 0
   decayPerFrameDraw: 1
 --- !u!114 &114265505040536588
 MonoBehaviour:
@@ -275,7 +275,8 @@ MonoBehaviour:
   turnSpeed: 180
   shell: {fileID: 1233647468666552, guid: c35750661f56c04468e4a237a02ea171, type: 2}
   shootOffset: {x: 0.8, y: 0.25}
-  hp: 3
+  maxHp: 10
+  hp: 10
   pointValue: 3
   score: 0
 --- !u!114 &114652151270263660

@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Objects\RoomTileTemplate\Scripts\Room.cs" />
     <Compile Include="Assets\Scripts\AI\AIController.cs" />
     <Compile Include="Assets\Scripts\AI\AISample3.cs" />
     <Compile Include="Assets\Scripts\AI\SampeAI2.cs" />
@@ -78,19 +79,19 @@
     <None Include="Assets\Objects\AI\AI_Searcher.txt" />
     <None Include="Assets\Objects\AI\AI_Scared.txt" />
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
-      <HintPath>C:/Users/darpaler/Desktop/TankGame/TankGame/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+      <HintPath>C:/Users/darpaler/Desktop/GPE205/TankGame/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/darpaler/Desktop/TankGame/TankGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/darpaler/Desktop/GPE205/TankGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/darpaler/Desktop/TankGame/TankGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/darpaler/Desktop/GPE205/TankGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/darpaler/Desktop/TankGame/TankGame/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/darpaler/Desktop/GPE205/TankGame/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/darpaler/Desktop/TankGame/TankGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/darpaler/Desktop/GPE205/TankGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity 2018.2.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -273,7 +274,7 @@
       <HintPath>C:/Program Files/Unity 2018.2.5f1/Editor/Data/Managed/Unity.Locator.dll</HintPath>
     </Reference>
     <Reference Include="Facebook.Unity.Settings">
-      <HintPath>C:/Users/darpaler/Desktop/TankGame/TankGame/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+      <HintPath>C:/Users/darpaler/Desktop/GPE205/TankGame/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Program Files/Unity 2018.2.5f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

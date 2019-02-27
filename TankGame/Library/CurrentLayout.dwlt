@@ -108,10 +108,15 @@ MonoBehaviour:
     y: 30
     width: 1904
     height: 931
+<<<<<<< Updated upstream
   m_MinSize: {x: 860, y: 471}
   m_MaxSize: {x: 22012, y: 14021}
+=======
+  m_MinSize: {x: 860, y: 492}
+  m_MaxSize: {x: 22012, y: 14042}
+>>>>>>> Stashed changes
   vertical: 0
-  controlID: 185
+  controlID: 192
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -160,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 204, y: 442}
   m_MaxSize: {x: 4004, y: 8042}
   vertical: 1
-  controlID: 186
+  controlID: 193
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -204,8 +209,8 @@ MonoBehaviour:
     y: 480
     width: 915
     height: 451
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -234,7 +239,11 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 471}
   m_MaxSize: {x: 10004, y: 14021}
   vertical: 1
+<<<<<<< Updated upstream
   controlID: 164
+=======
+  controlID: 131
+>>>>>>> Stashed changes
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -446,9 +455,15 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< Updated upstream
     m_Target: {x: 16.35912, y: -103.682274, z: 89.184204}
     speed: 2
     m_Value: {x: 16.35912, y: -103.682274, z: 89.184204}
+=======
+    m_Target: {x: 32.579586, y: -191.82686, z: 171.13872}
+    speed: 2
+    m_Value: {x: 32.579586, y: -191.82686, z: 171.13872}
+>>>>>>> Stashed changes
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -476,6 +491,7 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
+<<<<<<< Updated upstream
     m_Target: {x: -0.4932399, y: -0.037609186, z: 0.021351786, w: -0.86881757}
     speed: 2
     m_Value: {x: -0.49323994, y: -0.03760919, z: 0.021351788, w: -0.8688176}
@@ -483,6 +499,15 @@ MonoBehaviour:
     m_Target: 348.7663
     speed: 2
     m_Value: 348.7663
+=======
+    m_Target: {x: -0.39517048, y: -0.089953355, z: 0.038918387, w: -0.91336423}
+    speed: 2
+    m_Value: {x: -0.39517042, y: -0.08995335, z: 0.038918383, w: -0.9133641}
+  m_Size:
+    m_Target: 285.4896
+    speed: 2
+    m_Value: 285.4896
+>>>>>>> Stashed changes
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -521,9 +546,15 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< Updated upstream
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: 30afffff06f9ffff00000000
+=======
+    m_SelectedIDs: c42f0000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 7c0cffff0afbffff00000000
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -584,20 +615,34 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< Updated upstream
     - Assets/Objects/RoomTileTemplate/Rooms
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
   - Assets/Objects/RoomTileTemplate/Rooms
+=======
+    - Assets/Scripts
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Scripts
+>>>>>>> Stashed changes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\darpaler\Desktop\GPE205\TankGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< Updated upstream
     m_SelectedIDs: 72360000
     m_LastClickedID: 13938
     m_ExpandedIDs: 00000000b22d0000163000001a35000000ca9a3b
+=======
+    m_SelectedIDs: 50310000
+    m_LastClickedID: 12624
+    m_ExpandedIDs: 00000000642c000000ca9a3b
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -625,7 +670,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< Updated upstream
     m_ExpandedIDs: 00000000b22d000016300000023100008c320000
+=======
+    m_ExpandedIDs: 00000000642c0000d42e0000c42f000050310000
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -652,7 +701,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: d42c0000440a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

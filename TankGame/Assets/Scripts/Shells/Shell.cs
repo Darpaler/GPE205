@@ -8,11 +8,11 @@ using UnityEngine;
 public class Shell : MonoBehaviour {
 
     private Rigidbody rb;       //Rigidbody Component
-    private ShellData data;     //ShellData Component
+    protected ShellData data;     //ShellData Component
 
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    public virtual void Start ()
     {
         //Get Components
         rb = gameObject.GetComponent<Rigidbody>();

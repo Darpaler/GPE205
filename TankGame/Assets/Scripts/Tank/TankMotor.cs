@@ -11,10 +11,10 @@ public class TankMotor : MonoBehaviour {
     private CharacterController characterController;    //Character Controller Component
     private Transform tf;                               //Transform Component
     private NoiseMaker noiseMaker;                      //NoiseMaker Component
-    private float nextShotTime;                         //Reload Time
+    public float nextShotTime;                         //Reload Time
 
     // Use this for initialization
-    void Start ()
+    public virtual void Start ()
     {
         //Get Components
         characterController = gameObject.GetComponent<CharacterController>();
@@ -24,15 +24,9 @@ public class TankMotor : MonoBehaviour {
         //Set Time
         nextShotTime = Time.time;
 	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 
     //Movement Functions
-    public void Move(float speed)                                       //Move Foward/Back
+    public virtual void Move(float speed)                                       //Move Foward/Back
     {
         characterController.SimpleMove(tf.forward * speed);             //Move By How Fast You Are
 
@@ -72,7 +66,7 @@ public class TankMotor : MonoBehaviour {
         return true;
     }
 
-    public void Shoot(GameObject shell, Vector3 offset)        //Shoot A Shell
+    public virtual void Shoot(GameObject shell, Vector3 offset)        //Shoot A Shell
     {
         if (Time.time >= nextShotTime)                         //If You Waited The Reload Time
         {

@@ -11,8 +11,8 @@ public class InputController: MonoBehaviour
     //Variables
     public enum InputScheme { WASD, arrowKeys };    //Input Types
     public InputScheme input = InputScheme.WASD;    //Current Input
-    private TankData data;                          //TankData Component
-    private TankMotor motor;                        //TankMotor Component
+    public TankData data;                           //TankData Component
+    public TankMotor motor;                         //TankMotor Component
 
     // Use this for initialization
     void Start ()
@@ -20,6 +20,9 @@ public class InputController: MonoBehaviour
         //Get Components
         data = GetComponent<TankData>();
         motor = GetComponent<TankMotor>();
+
+        //Set GameManager
+        GameManager.instance.player = this;
 
     }
 	
@@ -83,7 +86,7 @@ public class InputController: MonoBehaviour
                                                         //Shoot
                 if (Input.GetKey(KeyCode.Space))
                 {
-                    motor.Shoot(data.shell, data.shootOffset);
+                        motor.Shoot(data.shell, data.shootOffset);
                 }
                 break;
         }

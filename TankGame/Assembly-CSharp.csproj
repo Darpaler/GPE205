@@ -70,6 +70,8 @@
     <Compile Include="Assets\Scripts\Player\InputController.cs" />
     <Compile Include="Assets\Scripts\Shells\Shell.cs" />
     <Compile Include="Assets\Scripts\Shells\ShellData.cs" />
+    <Compile Include="Assets\Scripts\Shells\ShellRC.cs" />
+    <Compile Include="Assets\Scripts\Shells\ShellRCMotor.cs" />
     <Compile Include="Assets\Scripts\Tank\NoiseMaker.cs" />
     <Compile Include="Assets\Scripts\Tank\Rotate.cs" />
     <Compile Include="Assets\Scripts\Tank\TankData.cs" />

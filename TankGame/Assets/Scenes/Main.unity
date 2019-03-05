@@ -3991,6 +3991,12 @@ Prefab:
       propertyPath: shootVolume
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114592409118768490, guid: 68b2a400bae9e3a4eabe60a70aed1cbf,
+        type: 2}
+      propertyPath: shell
+      value: 
+      objectReference: {fileID: 1672763993214052, guid: 0918b001ea719a5498d58acec1f667ea,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68b2a400bae9e3a4eabe60a70aed1cbf, type: 2}
   m_IsPrefabAsset: 0

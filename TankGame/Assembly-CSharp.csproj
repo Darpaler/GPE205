@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Objects\RoomTileTemplate\Scripts\Room.cs" />
     <Compile Include="Assets\Scripts\AI\AIController.cs" />
     <Compile Include="Assets\Scripts\AI\AISample3.cs" />
     <Compile Include="Assets\Scripts\AI\SampeAI2.cs" />

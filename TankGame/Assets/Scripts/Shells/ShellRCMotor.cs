@@ -15,7 +15,7 @@ public class ShellRCMotor : TankMotor {
         //Do Nothing
     }
 
-    public override void Shoot(GameObject shell, Vector3 offset)
+    public override void Shoot(GameObject shell, Vector3 offset, float fireRateModifier)
     {
         if (Time.time >= nextShotTime)                         //If You Waited The Reload Time
         {

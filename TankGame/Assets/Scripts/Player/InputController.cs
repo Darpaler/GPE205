@@ -57,7 +57,7 @@ public class InputController: MonoBehaviour
                                                         //Shoot
                 if (Input.GetKey(KeyCode.Keypad0))
                 {
-                    motor.Shoot(data.shell, data.shootOffset);
+                    motor.Shoot(data.shell, data.shootOffset, data.fireRateModifier);
                 }
                 break;
 
@@ -86,7 +86,7 @@ public class InputController: MonoBehaviour
                                                         //Shoot
                 if (Input.GetKey(KeyCode.Space))
                 {
-                        motor.Shoot(data.shell, data.shootOffset);
+                        motor.Shoot(data.shell, data.shootOffset, data.fireRateModifier);
                 }
                 break;
         }

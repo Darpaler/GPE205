@@ -66,13 +66,13 @@ public class TankMotor : MonoBehaviour {
         return true;
     }
 
-    public virtual void Shoot(GameObject shell, Vector3 offset)        //Shoot A Shell
+    public virtual void Shoot(GameObject shell, Vector3 offset, float fireRateModifier)        //Shoot A Shell
     {
         if (Time.time >= nextShotTime)                         //If You Waited The Reload Time
         {
             Instantiate(shell, tf.position + (tf.forward * offset.x) + (tf.up * offset.y), tf.rotation, tf.parent);        //Create A Shell
             noiseMaker.volume = Mathf.Max(noiseMaker.volume, noiseMaker.shootVolume);                                      //Make Noise
-            nextShotTime = Time.time + shell.GetComponent<ShellData>().fireRate;                                           //Reset Reload Time
+            nextShotTime = Time.time + (shell.GetComponent<ShellData>().fireRate * (1/fireRateModifier));                                           //Reset Reload Time
         }
     }
 

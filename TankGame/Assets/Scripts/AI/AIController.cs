@@ -124,7 +124,7 @@ public class AIController : MonoBehaviour
                 else
                 {
                     DoChase();
-                    motor.Shoot(data.shell, data.shootOffset);
+                    motor.Shoot(data.shell, data.shootOffset, data.fireRateModifier);
                 }
                 // Check for Transitions
                 if (data.hp < data.maxHp * percentHealthToFlee)

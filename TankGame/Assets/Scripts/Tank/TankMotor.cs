@@ -72,7 +72,7 @@ public class TankMotor : MonoBehaviour {
         {
             Instantiate(shell, tf.position + (tf.forward * offset.x) + (tf.up * offset.y), tf.rotation, tf.parent);        //Create A Shell
             noiseMaker.volume = Mathf.Max(noiseMaker.volume, noiseMaker.shootVolume);                                      //Make Noise
-            nextShotTime = Time.time + (shell.GetComponent<ShellData>().fireRate * (1/fireRateModifier));                                           //Reset Reload Time
+            nextShotTime = Time.time + (shell.GetComponent<ShellData>().fireRate * (1/fireRateModifier));                  //Reset Reload Time
         }
     }
 

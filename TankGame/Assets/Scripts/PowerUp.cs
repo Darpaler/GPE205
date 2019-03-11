@@ -16,6 +16,7 @@ public class PowerUp
     public void OnActivate(TankData target)
     {
         target.moveSpeed += speedModifier;
+        healthModifier = Mathf.Clamp(healthModifier, 0, target.maxHp - target.hp);
         target.hp += healthModifier;
         target.maxHp += maxHealthModifier;
         target.fireRateModifier += fireRateModifier;

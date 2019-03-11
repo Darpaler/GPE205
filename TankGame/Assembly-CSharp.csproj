@@ -68,6 +68,8 @@
     <Compile Include="Assets\Scripts\AI\SampleAIController.cs" />
     <Compile Include="Assets\Scripts\CheatController.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\PickUp.cs" />
+    <Compile Include="Assets\Scripts\PickUpWeapon.cs" />
     <Compile Include="Assets\Scripts\Player\InputController.cs" />
     <Compile Include="Assets\Scripts\PowerUp.cs" />
     <Compile Include="Assets\Scripts\PowerUpController.cs" />
@@ -75,6 +77,7 @@
     <Compile Include="Assets\Scripts\Shells\ShellData.cs" />
     <Compile Include="Assets\Scripts\Shells\ShellRC.cs" />
     <Compile Include="Assets\Scripts\Shells\ShellRCMotor.cs" />
+    <Compile Include="Assets\Scripts\Spawn.cs" />
     <Compile Include="Assets\Scripts\Tank\NoiseMaker.cs" />
     <Compile Include="Assets\Scripts\Tank\Rotate.cs" />
     <Compile Include="Assets\Scripts\Tank\TankData.cs" />

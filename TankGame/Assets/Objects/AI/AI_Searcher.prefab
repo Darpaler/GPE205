@@ -240,6 +240,7 @@ MonoBehaviour:
   hp: 6
   pointValue: 2
   score: 0
+  fireRateModifier: 1
 --- !u!114 &114107832529848554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -279,6 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18af065243a7bff42bf09defacaa8c3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextShotTime: 0
 --- !u!114 &114495173935328230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -304,23 +306,7 @@ MonoBehaviour:
   fleeDistance: 5
   percentHealthToFlee: 0.5
   fleeTime: 5
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  waypoints: []
   closeEnough: 1
   loopType: 1
 --- !u!143 &143817401977951964

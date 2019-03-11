@@ -82,6 +82,10 @@ public class TankMotor : MonoBehaviour {
         hp -= damage;               //Deal Damage   
         if (hp <= 0)                //If HP Hits 0
         {
+            if(tf.parent.tag == "Player")
+            {
+                GameManager.instance.main.transform.parent = GameManager.instance.gameObject.GetComponent<Transform>();
+            }
             Destroy(gameObject);
             return 0;
         }

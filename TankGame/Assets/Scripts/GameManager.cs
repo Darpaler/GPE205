@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour {
     //Variables
     public static GameManager instance;     //Singleton
     public InputController player;          //Player
+    public Camera main;                     //Main Camera
+    public FollowGameObject cameraFollow;   //Camera's Follow Game Object Component
 
 
     // Runs before any Start() functions run
@@ -25,11 +27,20 @@ public class GameManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
+
+        //Get Components
+        cameraFollow = main.GetComponent<FollowGameObject>();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+        if(cameraFollow.targetObjectTransform == null)
+        {
+            //Set Camera
+            cameraFollow.targetObjectTransform = player.gameObject.GetComponent<Transform>();
+        }
 		
 	}
 }

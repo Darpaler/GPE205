@@ -37,7 +37,7 @@ public class Shell : MonoBehaviour {
             hitData.hp = collision.gameObject.GetComponent<TankMotor>().Hit(hitData.hp, data.damage);
 
             //If They Died
-            if (hitData.hp == 0)
+            if (hitData.hp - data.damage <= 0)
             {
                 //Whoever Shot The Shell Gets Points For Who They Killed
                 transform.parent.GetComponentInChildren<TankData>().score += hitData.pointValue;

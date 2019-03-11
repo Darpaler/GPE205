@@ -7,12 +7,12 @@ public class Spawn : MonoBehaviour {
     //Variables
     public GameObject prefab;           //Prefab to spawn
     public float spawnDelay;            //Time in between spawns
-    private float nextSpawnTime;        //The time until the next spawn
-    private Transform tf;               //Transform Component
-    private GameObject spawnedObject;   //The object we spawned 
+    protected float nextSpawnTime;        //The time until the next spawn
+    protected Transform tf;               //Transform Component
+    protected GameObject spawnedObject;   //The object we spawned 
 
     // Use this for initialization
-    void Start () {
+    public virtual void Start () {
 
         //Get Components
         tf = GetComponent<Transform>();
@@ -29,7 +29,7 @@ public class Spawn : MonoBehaviour {
             if (Time.time > nextSpawnTime)
             {
                 //Spawn it and set the next time
-                spawnedObject = Instantiate(prefab, tf.position, prefab.transform.rotation) as GameObject;
+                spawnedObject = Instantiate(prefab, tf.position, prefab.transform.rotation, tf) as GameObject;
                 nextSpawnTime = Time.time + spawnDelay;
             }
         }

@@ -73,12 +73,14 @@ public class AIController : MonoBehaviour
 
         //Set Time
         lastSeen = Time.time - 1;
+
+        waypoints = tf.parent.GetComponentsInChildren<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (target == null) { target = GameManager.instance.player.transform;}
         float distanceFromTarget = (target.position - tf.position).magnitude;
 
         switch (aiState)

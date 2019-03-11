@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  damage: 1
+  damage: 3
   fireRate: 1
   timeTillDestroy: 5
 --- !u!114 &114201680558571220

@@ -14,6 +14,10 @@ public class PickUpWeapon : MonoBehaviour {
     {
         //Get Components
         tf = GetComponent<Transform>();
+
+        //Set GameManager
+        GameManager.instance.weapons.Add(this);
+
     }
 
     public void OnTriggerEnter(Collider other)
@@ -35,5 +39,9 @@ public class PickUpWeapon : MonoBehaviour {
             //Destroy this powerup
             Destroy(gameObject);
         }
+    }
+    private void OnDestroy()
+    {
+        GameManager.instance.weapons.Add(this);
     }
 }

@@ -74,7 +74,11 @@ public class AIController : MonoBehaviour
         //Set Time
         lastSeen = Time.time - 1;
 
+        //Set Waypoints
         waypoints = tf.parent.GetComponentsInChildren<Transform>();
+
+        //Set GameManager
+        GameManager.instance.enemies.Add(data);
     }
 
     // Update is called once per frame
@@ -495,6 +499,11 @@ public class AIController : MonoBehaviour
             Debug.DrawLine(tf.position, tf.position + DEBUG_ANGLE_DISTANCE * tf.forward + perpendicularDirection * oppositeSideLength, Color.green);
             Debug.DrawLine(tf.position, tf.position + DEBUG_ANGLE_DISTANCE * tf.forward - perpendicularDirection * oppositeSideLength, Color.green);
         }
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.instance.enemies.Remove(data);
     }
 
 }

@@ -15,6 +15,9 @@ public class PickUp : MonoBehaviour {
         //Get Components
         tf = GetComponent<Transform>();
 
+        //Set GameManager
+        GameManager.instance.pickUps.Add(this);
+
 	}
 	
 	// Update is called once per frame
@@ -42,4 +45,10 @@ public class PickUp : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+
+    private void OnDestroy()
+    {
+        GameManager.instance.pickUps.Add(this);
+    }
+
 }

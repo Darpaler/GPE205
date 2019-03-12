@@ -251,7 +251,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-1564
+  m_Name: pb_Mesh-1674
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -653,6 +653,9 @@ MonoBehaviour:
   player: {fileID: 0}
   main: {fileID: 2040517070}
   cameraFollow: {fileID: 0}
+  enemies: []
+  pickUps: []
+  weapons: []
 --- !u!4 &789565034
 Transform:
   m_ObjectHideFlags: 0
@@ -671,7 +674,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-1406
+  m_Name: pb_Mesh-1496
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -904,7 +907,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-1250
+  m_Name: pb_Mesh-1320
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1167,13 +1170,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rows: 3
   cols: 3
+  roomWidth: 50
+  roomHeight: 50
   gridPrefabs:
   - {fileID: 1300717248092160, guid: b45ed8fbf1625794890028c4f3d9f117, type: 2}
   - {fileID: 1162291359508388, guid: 3baf770dcc631df4094d4abd20749a4e, type: 2}
   - {fileID: 1890634789872448, guid: 0b49f96bd14480545aa5a5c2e480030a, type: 2}
   - {fileID: 1882938651972710, guid: 5b43d019040733b4eb83b8c18e9aa8c7, type: 2}
   mapType: 0
-  mapSeed: 0
+  mapSeed: 2999
 --- !u!4 &1286025959
 Transform:
   m_ObjectHideFlags: 0
@@ -1221,7 +1226,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-1248
+  m_Name: pb_Mesh-1318
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1588,7 +1593,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-1408
+  m_Name: pb_Mesh-1498
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2

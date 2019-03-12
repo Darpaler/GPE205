@@ -74,9 +74,10 @@ GameObject:
   - component: {fileID: 114799867115043488}
   - component: {fileID: 114361185783758476}
   - component: {fileID: 114320106114142416}
+  - component: {fileID: 114689804313140162}
   m_Layer: 0
   m_Name: AI_Watcher
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -231,6 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18af065243a7bff42bf09defacaa8c3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextShotTime: 0
 --- !u!114 &114320106114142416
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -275,6 +277,18 @@ MonoBehaviour:
   waypoints: []
   closeEnough: 1
   loopType: 0
+--- !u!114 &114689804313140162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1434137013922734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 945a6dbff9ca0ee409956930b41e03d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps: []
 --- !u!114 &114799867115043488
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -295,6 +309,7 @@ MonoBehaviour:
   hp: 6
   pointValue: 2
   score: 0
+  fireRateModifier: 1
 --- !u!114 &114846178675044494
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -7,8 +7,8 @@ public class LevelGenerator : MonoBehaviour{
     //Variables
     public int rows;                                        //The amount of rows in the level
     public int cols;                                        //The amount of collumns in the level
-    private float roomWidth = 50.0f;                        //The width of each room
-    private float roomHeight = 50.0f;                       //The height of each room
+    public float roomWidth = 50.0f;                        //The width of each room
+    public float roomHeight = 50.0f;                       //The height of each room
     private Room[,] grid;                                   //The list of rooms in our level
     public GameObject[] gridPrefabs;                        //The list of tiles to build our level
     public enum MapType { mapOfTheDay, random, custom};     //What seed to use for the map

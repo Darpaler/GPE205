@@ -41,9 +41,10 @@ GameObject:
   - component: {fileID: 114754291323661560}
   - component: {fileID: 114687820145244392}
   - component: {fileID: 114507748510032092}
+  - component: {fileID: 114273574953262128}
   m_Layer: 0
   m_Name: AI_Brave
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -220,6 +221,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1103902147235100}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114273574953262128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1197646558970386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 945a6dbff9ca0ee409956930b41e03d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps: []
 --- !u!114 &114500643822925640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -231,6 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18af065243a7bff42bf09defacaa8c3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextShotTime: 0
 --- !u!114 &114507748510032092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -307,6 +321,7 @@ MonoBehaviour:
   hp: 6
   pointValue: 2
   score: 0
+  fireRateModifier: 1
 --- !u!143 &143471063514537604
 CharacterController:
   m_ObjectHideFlags: 1

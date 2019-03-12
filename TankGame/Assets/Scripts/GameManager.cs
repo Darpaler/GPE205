@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour {
     public InputController player;          //Player
     public Camera main;                     //Main Camera
     public FollowGameObject cameraFollow;   //Camera's Follow Game Object Component
+    public List<TankData> enemies;          //List of enemies
+    public List<PickUp> pickUps;            //List of pick ups
+    public List<PickUpWeapon> weapons;      //List of pick up weaopons
 
 
     // Runs before any Start() functions run

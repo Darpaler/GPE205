@@ -19,8 +19,11 @@ public class ShellRCMotor : TankMotor {
     {
         if (Time.time >= nextShotTime)                         //If You Waited The Reload Time
         {
+            Debug.Log(GameManager.instance.player.gameObject);
+            GameManager.instance.main.GetComponent<FollowGameObject>().targetObjectTransform = GameManager.instance.player.transform;
+            GameManager.instance.main.GetComponent<FollowGameObject>().transform.SetParent(GameManager.instance.transform);
+            Debug.Log(GameManager.instance.main.transform.parent);
             Destroy(gameObject);
         }
     }
-
 }

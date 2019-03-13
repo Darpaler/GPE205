@@ -11,6 +11,7 @@ public class TankMotor : MonoBehaviour {
     private CharacterController characterController;    //Character Controller Component
     private Transform tf;                               //Transform Component
     private NoiseMaker noiseMaker;                      //NoiseMaker Component
+    [HideInInspector]
     public float nextShotTime;                         //Reload Time
 
     // Use this for initialization

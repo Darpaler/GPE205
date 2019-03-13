@@ -6,7 +6,8 @@ public class FollowGameObject : MonoBehaviour {
 
     //Variables
     public Transform targetObjectTransform; //Target Object
-    public Vector3 offset;                  //Offest
+    public Vector3 offset;                  //Offset
+    public Vector3 baseOffset;       //Default Offset
     private Transform tf;                   //Transform Component
 
 	// Use this for initialization
@@ -14,6 +15,9 @@ public class FollowGameObject : MonoBehaviour {
 	{
         //Get Components
 	    tf = GetComponent<Transform>();
+
+        //Save Offset
+        baseOffset = offset;
 
 	}
 	

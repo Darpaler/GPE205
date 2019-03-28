@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945a6dbff9ca0ee409956930b41e03d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUps: []
 --- !u!114 &114104911878463828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -245,6 +246,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powCon: {fileID: 0}
+  cheatPowerUp:
+    speedModifier: 0
+    healthModifier: 0
+    maxHealthModifier: 0
+    fireRateModifier: 0
+    duration: 0
+    isPermanent: 0
 --- !u!114 &114232032867253880
 MonoBehaviour:
   m_ObjectHideFlags: 1

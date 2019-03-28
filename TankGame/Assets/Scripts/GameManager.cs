@@ -12,6 +12,11 @@ public class GameManager : MonoBehaviour {
     public List<TankData> enemies;          //List of enemies
     public List<PickUp> pickUps;            //List of pick ups
     public List<PickUpWeapon> weapons;      //List of pick up weaopons
+    public GameObject mainMenu;
+    public GameObject pauseMenu;
+    public GameObject level;
+    public GameObject currentLevel;
+
 
 
     // Runs before any Start() functions run
@@ -34,11 +39,10 @@ public class GameManager : MonoBehaviour {
         //Get Components
         cameraFollow = main.GetComponent<FollowGameObject>();
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
-
         if(cameraFollow.targetObjectTransform == null)
         {
             //Set Camera
@@ -46,4 +50,29 @@ public class GameManager : MonoBehaviour {
         }
 		
 	}
+
+    public void runMainMenu()
+    {
+        main.gameObject.transform.parent = instance.transform;
+        Destroy(currentLevel);
+        pauseMenu.SetActive(false);
+        mainMenu.SetActive(true);
+    }
+    public void runPauseMenu()
+    {
+        main.gameObject.transform.parent = instance.transform;
+        currentLevel.SetActive(false);
+        mainMenu.SetActive(false);
+        pauseMenu.SetActive(true);
+    }
+    public void runLevel()
+    {
+        if (currentLevel == null)
+        {
+            currentLevel = Instantiate(level);
+        }
+        pauseMenu.SetActive(false);
+        mainMenu.SetActive(false);
+        currentLevel.SetActive(true);
+    }
 }

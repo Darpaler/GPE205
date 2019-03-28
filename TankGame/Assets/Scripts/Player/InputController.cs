@@ -32,7 +32,7 @@ public class InputController: MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-            GameManager.instance.runPauseMenu();
+            GameManager.instance.RunPauseMenu();
         }
 
         //Switch Different Input Types

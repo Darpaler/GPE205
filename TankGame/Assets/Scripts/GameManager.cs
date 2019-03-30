@@ -17,8 +17,8 @@ public class GameManager : MonoBehaviour {
     public GameObject pauseMenu;            //The pause menu
     public GameObject level;                //The level prefab
     public GameObject currentLevel;         //The current running level
+    public List<ScoreData> scores;          //The high score list
     public Text highScoreText;              //The high score display
-    private int currentHighScore;           //The current high score
 
 
 
@@ -60,10 +60,10 @@ public class GameManager : MonoBehaviour {
 
     public void RunMainMenu()
     {
+        Save();
         main.gameObject.transform.parent = instance.transform;
         Destroy(currentLevel);
         pauseMenu.SetActive(false);
-        Save();
         mainMenu.SetActive(true);
     }
     public void RunPauseMenu()
@@ -86,24 +86,36 @@ public class GameManager : MonoBehaviour {
 
     public void Save()
     {
-        if(player.data.score > currentHighScore)
+        scores.Add(new ScoreData(player.data.name, player.data.score));
+        scores.Sort();
+        scores.Reverse();
+        scores = scores.GetRange(0, 3);
+        for (int i = 0; i < scores.Count; i++)
         {
-            currentHighScore = player.data.score;
-            PlayerPrefs.SetInt("highScore", currentHighScore);
-            highScoreText.text = "High Score: " + currentHighScore;
-            PlayerPrefs.SetString("highScoreString", highScoreText.text);
-            PlayerPrefs.Save();
+            PlayerPrefs.SetString("name" + i, scores[i].name);
+            PlayerPrefs.SetFloat("score" + i, scores[i].score);
         }
+        highScoreText.text = "HIGHSCORES\n";
+        for (int i = 0; i < scores.Count; i++)
+        {
+            highScoreText.text += scores[i].name + ": " + scores[i].score + "\n";
+        }
+        PlayerPrefs.SetString("highScoreText", highScoreText.text);
+        PlayerPrefs.Save();
+
     }
     public void Load()
     {
-        currentHighScore = PlayerPrefs.GetInt("highScore");
-        highScoreText.text = PlayerPrefs.GetString("highScoreString");
+        for (int i = 0; i < 3; i++)
+        {
+            scores.Add(new ScoreData(PlayerPrefs.GetString("name" + i), PlayerPrefs.GetFloat("score" + i)));
+        }
+        highScoreText.text = PlayerPrefs.GetString("highScoreText");
     }
 
     private void OnApplicationQuit()
     {
-        Debug.Log("Savign and Quitting");
+        Debug.Log("Saving and Quitting");
         Save();
     }
 

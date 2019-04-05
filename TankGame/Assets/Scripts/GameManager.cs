@@ -8,8 +8,11 @@ public class GameManager : MonoBehaviour {
     //Variables
     public static GameManager instance;     //Singleton
     public InputController player;          //Player
+    public InputController player2;
     public Camera main;                     //Main Camera
+    public Camera camera2;
     public FollowGameObject cameraFollow;   //Camera's Follow Game Object Component
+    public FollowGameObject camera2Follow;
     public List<TankData> enemies;          //List of enemies
     public List<PickUp> pickUps;            //List of pick ups
     public List<PickUpWeapon> weapons;      //List of pick up weaopons
@@ -41,6 +44,7 @@ public class GameManager : MonoBehaviour {
 
         //Get Components
         cameraFollow = main.GetComponent<FollowGameObject>();
+        camera2Follow = camera2.GetComponent<FollowGameObject>();
 
         Load();
 
@@ -55,6 +59,10 @@ public class GameManager : MonoBehaviour {
             //Set Camera
             cameraFollow.targetObjectTransform = player.gameObject.GetComponent<Transform>();
         }
+        if(camera2Follow.targetObjectTransform == null)
+        {
+            camera2Follow.targetObjectTransform = player2.gameObject.GetComponent<Transform>();
+        }
 		
 	}
 
@@ -62,6 +70,7 @@ public class GameManager : MonoBehaviour {
     {
         Save();
         main.gameObject.transform.parent = instance.transform;
+        camera2.gameObject.transform.parent = instance.transform;
         Destroy(currentLevel);
         pauseMenu.SetActive(false);
         mainMenu.SetActive(true);
@@ -69,6 +78,7 @@ public class GameManager : MonoBehaviour {
     public void RunPauseMenu()
     {
         main.gameObject.transform.parent = instance.transform;
+        camera2.gameObject.transform.parent = instance.transform;
         currentLevel.SetActive(false);
         mainMenu.SetActive(false);
         pauseMenu.SetActive(true);

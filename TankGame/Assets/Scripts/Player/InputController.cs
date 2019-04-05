@@ -22,8 +22,14 @@ public class InputController: MonoBehaviour
         motor = GetComponent<TankMotor>();
 
         //Set GameManager
-        GameManager.instance.player = this;
-
+        if(GameManager.instance.player != null)
+        {
+            GameManager.instance.player2 = this;
+        }
+        else
+        {
+            GameManager.instance.player = this;
+        }
     }
 	
 	// Update is called once per frame

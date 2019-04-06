@@ -8,6 +8,7 @@ public class SpawnPlayer : Spawn {
     public GameObject[] playerSpawns;    //List of possible player spawn points
     public GameObject currentSpawn;      //The player's current spawn point
     public bool isGenerated;             //Whether the level is randomly generated or not
+    public GameObject[] players;         //The parent objects that contain the players;
 
 	// Use this for initialization
 	public override void Start () {
@@ -17,10 +18,10 @@ public class SpawnPlayer : Spawn {
         {
             setSpawns();
         }
-        spawnedObject = GameManager.instance.player.gameObject;
+        players = GameObject.FindGameObjectsWithTag("Player");
 
 
-	}
+    }
 
     void Update()
     {
@@ -33,9 +34,18 @@ public class SpawnPlayer : Spawn {
                 //Pick a random spawn point
                 currentSpawn = playerSpawns[Random.Range(0, playerSpawns.Length)];
 
+                
                 //Spawn it and set the next time
-                spawnedObject = Instantiate(prefab, currentSpawn.transform.position, currentSpawn.transform.rotation, GameObject.FindGameObjectWithTag("Player").transform) as GameObject;
-                GameManager.instance.player = spawnedObject.GetComponent<InputController>();
+                spawnedObject = Instantiate(prefab, currentSpawn.transform.position, currentSpawn.transform.rotation) as GameObject;
+                if (players[0].transform.childCount == 0)
+                {
+                    spawnedObject.transform.parent = players[0].transform;
+                }
+                else if(players[1].transform.childCount == 0)
+                {
+                    spawnedObject.transform.parent = players[1].transform;
+                }
+
                 nextSpawnTime = Time.time + spawnDelay;
             }
         }

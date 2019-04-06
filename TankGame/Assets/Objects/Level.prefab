@@ -20,6 +20,21 @@ GameObject:
   m_Component:
   - component: {fileID: 4685095020152640}
   m_Layer: 0
+  m_Name: P2
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1566689145334708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4917389153787326}
+  m_Layer: 0
   m_Name: P1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -36,6 +51,7 @@ GameObject:
   - component: {fileID: 4885892706948806}
   - component: {fileID: 114011510116243754}
   - component: {fileID: 114822723541988280}
+  - component: {fileID: 114771167017330548}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -49,12 +65,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1259643562802758}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4885892706948806}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4885892706948806
 Transform:
@@ -66,8 +82,22 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4917389153787326}
   - {fileID: 4685095020152640}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4917389153787326
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1566689145334708}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4885892706948806}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114011510116243754
@@ -92,6 +122,24 @@ MonoBehaviour:
   - {fileID: 1882938651972710, guid: 5b43d019040733b4eb83b8c18e9aa8c7, type: 2}
   mapType: 0
   mapSeed: 2999
+  multiplayer: 1
+--- !u!114 &114771167017330548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1800364518327700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82c5f67f72d6dfd4abeae1e02a51924e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1063208500173590, guid: b929a81eb357b75478676df1a7f8ef7b, type: 2}
+  spawnDelay: 3
+  playerSpawns: []
+  currentSpawn: {fileID: 0}
+  isGenerated: 1
+  players: []
 --- !u!114 &114822723541988280
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -108,3 +156,4 @@ MonoBehaviour:
   playerSpawns: []
   currentSpawn: {fileID: 0}
   isGenerated: 1
+  players: []

@@ -7,20 +7,21 @@ public class LevelGenerator : MonoBehaviour{
     //Variables
     public int rows;                                        //The amount of rows in the level
     public int cols;                                        //The amount of collumns in the level
-    public float roomWidth = 50.0f;                        //The width of each room
-    public float roomHeight = 50.0f;                       //The height of each room
+    public float roomWidth = 50.0f;                         //The width of each room
+    public float roomHeight = 50.0f;                        //The height of each room
     private Room[,] grid;                                   //The list of rooms in our level
     public GameObject[] gridPrefabs;                        //The list of tiles to build our level
     public enum MapType { mapOfTheDay, random, custom};     //What seed to use for the map
     public MapType mapType;                                 //The current type of seed to use
     public int mapSeed;                                     //The seed for the randomly generated level
-    private SpawnPlayer playerSpawn;                        //SpawnPlayer Component
+    private SpawnPlayer[] playerSpawns;                     //SpawnPlayer Component
+    public bool multiplayer = false;                        //Whether or not there are two players
 
     // Use this for initialization
     void Start()
     {
         //Get Components
-        playerSpawn = GetComponent<SpawnPlayer>();
+        playerSpawns = GetComponents<SpawnPlayer>();
 
         //Set the Seed
         switch (mapType)
@@ -38,11 +39,26 @@ public class LevelGenerator : MonoBehaviour{
                 break;
         }
 
+        if (multiplayer)
+        {
+            GameManager.instance.main.rect = new Rect(0, .5f, 1, .5f);
+            GameManager.instance.camera2.rect = new Rect(0, 0, 1, .5f);
+        }
+        else
+        {
+            GameManager.instance.main.rect = new Rect(0, 0, 1, 1);
+            GameManager.instance.camera2.rect = new Rect(0, 0, 0, 0);
+            playerSpawns[1].enabled = false;
+        }
+
         //Generate Grid
         GenerateGrid();
 
         //Set Player Spawns
-        playerSpawn.setSpawns();
+        foreach(SpawnPlayer playerSpawn in playerSpawns)
+        {
+            playerSpawn.setSpawns();
+        }
 
     }
 

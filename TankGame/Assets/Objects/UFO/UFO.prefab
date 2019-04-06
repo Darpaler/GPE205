@@ -314,6 +314,7 @@ MonoBehaviour:
   pointValue: 3
   score: 0
   fireRateModifier: 1
+  name: 
 --- !u!114 &114652151270263660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -325,7 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d7a17769f0a7ce40af73139202bcc5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: 1
+  input: 0
   data: {fileID: 0}
   motor: {fileID: 0}
 --- !u!143 &143080073366983854

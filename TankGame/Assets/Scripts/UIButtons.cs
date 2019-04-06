@@ -1,0 +1,50 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class UIButtons : MonoBehaviour {
+
+    //Variables
+    public Dropdown playerSelect;       //Selects either multiplayer or singleplayer
+    public Dropdown mapType;            //Selects the map type
+    public InputField mapSeed;                //Type in custom map seed
+
+    private LevelGenerator level;       //The level
+
+	// Use this for initialization
+	void Start () {
+        level = GameManager.instance.level.GetComponent<LevelGenerator>();
+    }
+	
+	// Update is called once per frame
+	void Update () {
+		
+        switch (playerSelect.value)
+        {
+            case 0:
+                level.multiplayer = false;
+                break;
+            case 1:
+                level.multiplayer = true;
+                break;
+        }
+
+        switch (mapType.value)
+        {
+            case 0:
+                level.mapType = LevelGenerator.MapType.mapOfTheDay;
+                mapSeed.gameObject.SetActive(false);
+                break;
+            case 1:
+                level.mapType = LevelGenerator.MapType.random;
+                mapSeed.gameObject.SetActive(false);
+                break;
+            case 2:
+                level.mapType = LevelGenerator.MapType.custom;
+                mapSeed.gameObject.SetActive(true);
+                level.mapSeed = int.Parse(mapSeed.text);                
+                break;
+        }
+	}
+}

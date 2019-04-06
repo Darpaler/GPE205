@@ -54,12 +54,12 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(cameraFollow.targetObjectTransform == null)
+        if(cameraFollow.targetObjectTransform == null && player != null)
         {
             //Set Camera
             cameraFollow.targetObjectTransform = player.gameObject.GetComponent<Transform>();
         }
-        if(camera2Follow.targetObjectTransform == null)
+        if(camera2Follow.targetObjectTransform == null && player2 != null)
         {
             camera2Follow.targetObjectTransform = player2.gameObject.GetComponent<Transform>();
         }
@@ -94,9 +94,13 @@ public class GameManager : MonoBehaviour {
         currentLevel.SetActive(true);
     }
 
+
     public void Save()
     {
-        scores.Add(new ScoreData(player.data.name, player.data.score));
+        if(player != null)
+        {
+            scores.Add(new ScoreData(player.data.name, player.data.score));
+        }
         scores.Sort();
         scores.Reverse();
         scores = scores.GetRange(0, 3);

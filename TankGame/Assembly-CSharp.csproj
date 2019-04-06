@@ -86,9 +86,11 @@
     <Compile Include="Assets\Scripts\Tank\Rotate.cs" />
     <Compile Include="Assets\Scripts\Tank\TankData.cs" />
     <Compile Include="Assets\Scripts\Tank\TankMotor.cs" />
+    <Compile Include="Assets\Scripts\UIButtons.cs" />
     <None Include="Assets\Objects\AI\AI_Brave.txt" />
     <None Include="Assets\Objects\AI\AI_Watcher.txt" />
     <None Include="Assets\Objects\AI\AI_Searcher.txt" />
+    <None Include="Assets\SkySerie Freebie\Hdri setup.txt" />
     <None Include="Assets\Objects\AI\AI_Scared.txt" />
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
       <HintPath>C:/Users/Darin/My Repositories/GPE205/TankGame/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>

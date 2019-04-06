@@ -86,6 +86,7 @@ public class TankMotor : MonoBehaviour {
             if(tf.parent.tag == "Player")
             {
                 GameManager.instance.main.transform.parent = GameManager.instance.gameObject.GetComponent<Transform>();
+                GameManager.instance.camera2.transform.parent = GameManager.instance.gameObject.GetComponent<Transform>();
             }
             Destroy(gameObject);
             return 0;

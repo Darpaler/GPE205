@@ -9,12 +9,17 @@ public class UIButtons : MonoBehaviour {
     public Dropdown playerSelect;       //Selects either multiplayer or singleplayer
     public Dropdown mapType;            //Selects the map type
     public InputField mapSeed;          //Type in custom map seed
+    public Slider volume;               //Volume Slider
+    public Slider sfxVolume;
+    private AudioSource bgm;
+
 
     private LevelGenerator level;       //The level
 
 	// Use this for initialization
 	void Start () {
         level = GameManager.instance.level.GetComponent<LevelGenerator>();
+        bgm = GameManager.instance.gameObject.GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -24,7 +29,7 @@ public class UIButtons : MonoBehaviour {
         {
             case 0:
                 level.multiplayer = false;
-                GameManager.instance.gameUI1.GetComponent<RectTransform>().offsetMin = new Vector2(0, 0);
+                GameManager.instance.gameUI1.GetComponent<RectTransform>().offsetMin = new Vector2(0, -360);
                 GameManager.instance.gameUI2.SetActive(false);
                 break;
             case 1:
@@ -48,7 +53,9 @@ public class UIButtons : MonoBehaviour {
                 level.mapType = LevelGenerator.MapType.custom;
                 mapSeed.gameObject.SetActive(true);
                 level.mapSeed = int.Parse(mapSeed.text);                
-                break;
+                break;       
         }
+        GameManager.instance.sfxVolume = sfxVolume.value;
+        bgm.volume = volume.value; 
 	}
 }

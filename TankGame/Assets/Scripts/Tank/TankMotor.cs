@@ -13,6 +13,9 @@ public class TankMotor : MonoBehaviour {
     private NoiseMaker noiseMaker;                      //NoiseMaker Component
     [HideInInspector]
     public float nextShotTime;                         //Reload Time
+    public AudioClip shoot;
+    public AudioClip hit;
+    public AudioClip death;
 
     // Use this for initialization
     public virtual void Start ()
@@ -74,6 +77,7 @@ public class TankMotor : MonoBehaviour {
             Instantiate(shell, tf.position + (tf.forward * offset.x) + (tf.up * offset.y), tf.rotation, tf.parent);        //Create A Shell
             noiseMaker.volume = Mathf.Max(noiseMaker.volume, noiseMaker.shootVolume);                                      //Make Noise
             nextShotTime = Time.time + (shell.GetComponent<ShellData>().fireRate * (1/fireRateModifier));                  //Reset Reload Time
+            AudioSource.PlayClipAtPoint(shoot, tf.position, GameManager.instance.sfxVolume);
         }
     }
 
@@ -88,11 +92,13 @@ public class TankMotor : MonoBehaviour {
                 GameManager.instance.main.transform.parent = GameManager.instance.gameObject.GetComponent<Transform>();
                 GameManager.instance.camera2.transform.parent = GameManager.instance.gameObject.GetComponent<Transform>();
             }
+            AudioSource.PlayClipAtPoint(death, tf.position, GameManager.instance.sfxVolume);
             Destroy(gameObject);
             return 0;
         }
         else                        //If Not
         {
+            AudioSource.PlayClipAtPoint(hit, tf.position, GameManager.instance.sfxVolume);
             return hp;              //Return HP
         }
     }

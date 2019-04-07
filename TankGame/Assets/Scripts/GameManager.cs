@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour {
     public Text highScoreText;              //The high score display
     public GameObject gameUI1;              //Player 1's UI screen
     public GameObject gameUI2;              //Player 2's UI screen
+    public LevelGenerator currentLevelGenerator;
+    public GameObject restart;
+    public float sfxVolume = 1.0f;
 
 
 
@@ -65,6 +68,10 @@ public class GameManager : MonoBehaviour {
         {
             camera2Follow.targetObjectTransform = player2.gameObject.GetComponent<Transform>();
         }
+        if (currentLevelGenerator.isGameOver)
+        {
+            restart.SetActive(true);            
+        }
 		
 	}
 
@@ -90,19 +97,23 @@ public class GameManager : MonoBehaviour {
         if (currentLevel == null)
         {
             currentLevel = Instantiate(level);
+            currentLevelGenerator = currentLevel.GetComponent<LevelGenerator>();
+            restart.SetActive(false);
         }
         pauseMenu.SetActive(false);
         mainMenu.SetActive(false);
         currentLevel.SetActive(true);
     }
+    public void Quit()
+    {
+        Application.Quit();
+    }
 
 
     public void Save()
     {
-        if(player != null)
-        {
-            scores.Add(new ScoreData(player.data.name, player.data.score));
-        }
+        scores.Add(new ScoreData(player.data.name, player.data.score));
+        scores.Add(new ScoreData(player2.data.name, player2.data.score));
         scores.Sort();
         scores.Reverse();
         scores = scores.GetRange(0, 3);

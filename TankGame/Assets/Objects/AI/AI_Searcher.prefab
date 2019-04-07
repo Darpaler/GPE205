@@ -242,6 +242,8 @@ MonoBehaviour:
   pointValue: 2
   score: 0
   fireRateModifier: 1
+  name: 
+  maxLives: 0
 --- !u!114 &114107832529848554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -282,6 +284,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextShotTime: 0
+  shoot: {fileID: 8300000, guid: 52910f26154ab2848a6d9479e5a1eca7, type: 3}
+  hit: {fileID: 8300000, guid: 61dcc017051b4bb41b574aa308c93787, type: 3}
+  death: {fileID: 8300000, guid: fc0f4e1eb730b5740a1c2560a6eef764, type: 3}
 --- !u!114 &114495173935328230
 MonoBehaviour:
   m_ObjectHideFlags: 1

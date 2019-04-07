@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\Tank\Rotate.cs" />
     <Compile Include="Assets\Scripts\Tank\TankData.cs" />
     <Compile Include="Assets\Scripts\Tank\TankMotor.cs" />
+    <Compile Include="Assets\Scripts\UIButtonAudio.cs" />
     <Compile Include="Assets\Scripts\UIButtons.cs" />
     <None Include="Assets\Objects\AI\AI_Brave.txt" />
     <None Include="Assets\Objects\AI\AI_Watcher.txt" />

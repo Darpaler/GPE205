@@ -23,6 +23,7 @@ public class SpawnPlayer : Spawn {
     private Text gameOverText;
     [SerializeField]
     private Text gameUIText;
+    public bool isGameOver;
 
     // Use this for initialization
     public override void Start () {
@@ -45,7 +46,11 @@ public class SpawnPlayer : Spawn {
                 gameOverScreen.SetActive(true);
                 gameUIText.enabled= false;
                 if(lives > 0) { gameOverText.text = "Respawning in\n" + Mathf.Ceil(nextSpawnTime - Time.time) + " seconds."; }
-                else { gameOverText.text = "G A M E   O V E R\nScore: " + score;}
+                else
+                {
+                    gameOverText.text = "G A M E   O V E R\nScore: " + score;
+                    isGameOver = true;
+                }
             }
 
             //And it is time to spawn
@@ -102,12 +107,9 @@ public class SpawnPlayer : Spawn {
             gameOverScreen.SetActive(false);
             gameUIText.enabled = true;
             nextSpawnTime = Time.time + spawnDelay;
-
         }
-
         score = data.score;
         gameUIText.text = "HP: " + data.hp + "\nLives: " + lives + "\nScore: " + score;
-
     }
 
     public void setSpawns()

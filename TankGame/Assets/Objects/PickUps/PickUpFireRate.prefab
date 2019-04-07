@@ -128,4 +128,4 @@ MonoBehaviour:
     fireRateModifier: 2
     duration: 10
     isPermanent: 0
-  feedback: {fileID: 0}
+  feedback: {fileID: 8300000, guid: d5c3482e07b0a2641a69a3ae24ad6a9a, type: 3}

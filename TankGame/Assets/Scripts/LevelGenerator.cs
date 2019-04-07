@@ -16,6 +16,7 @@ public class LevelGenerator : MonoBehaviour{
     public int mapSeed;                                     //The seed for the randomly generated level
     private SpawnPlayer[] playerSpawns;                     //SpawnPlayer Component
     public bool multiplayer = false;                        //Whether or not there are two players
+    public bool isGameOver = false;
 
     // Use this for initialization
     void Start()
@@ -60,6 +61,14 @@ public class LevelGenerator : MonoBehaviour{
             playerSpawn.setSpawns();
         }
 
+    }
+
+    void Update()
+    {
+        if((playerSpawns[0].isGameOver && playerSpawns[1].isGameOver) || (playerSpawns[0].isGameOver && (!playerSpawns[1].enabled)))
+        {
+            isGameOver = true;
+        }
     }
 
     public void GenerateGrid()

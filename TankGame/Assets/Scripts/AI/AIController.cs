@@ -61,6 +61,8 @@ public class AIController : MonoBehaviour
     private bool isPatrolForward = true;                                     //If we're patrolling forward or not for PingPong loop type
 
     private float distanceFromTarget;
+    private Transform target1;
+    private Transform target2;
 
     // Use this for initialization
     void Start()
@@ -86,7 +88,22 @@ public class AIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (target == null && GameManager.instance.player != null) { target = GameManager.instance.player.transform;}
+        if (target1 == null && GameManager.instance.player != null) { target1 = GameManager.instance.player.transform;}
+        if (target2 == null && GameManager.instance.player2 != null) { target2 = GameManager.instance.player2.transform; }
+        if(target1 != null && target2 != null)
+        {
+            if ((target2.position - tf.position).magnitude < (target1.position - tf.position).magnitude) { target = target2; }
+            else { target = target1; }
+        }
+        else if(target1 != null)
+        {
+            target = target1;
+        }
+        else if(target2 != null)
+        {
+            target = target2;
+        }
+
         if (target != null) {distanceFromTarget = (target.position - tf.position).magnitude;}
 
         switch (aiState)

@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shell: {fileID: 114766793791867062, guid: c35750661f56c04468e4a237a02ea171, type: 2}
-  feedback: {fileID: 0}
+  feedback: {fileID: 8300000, guid: d5c3482e07b0a2641a69a3ae24ad6a9a, type: 3}
 --- !u!135 &135907891293403302
 SphereCollider:
   m_ObjectHideFlags: 1

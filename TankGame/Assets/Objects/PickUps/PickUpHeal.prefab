@@ -218,7 +218,7 @@ MonoBehaviour:
     fireRateModifier: 0
     duration: 0
     isPermanent: 1
-  feedback: {fileID: 0}
+  feedback: {fileID: 8300000, guid: d5c3482e07b0a2641a69a3ae24ad6a9a, type: 3}
 --- !u!114 &114970504117308310
 MonoBehaviour:
   m_ObjectHideFlags: 1

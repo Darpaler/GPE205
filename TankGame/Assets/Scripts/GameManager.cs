@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour {
     public GameObject currentLevel;         //The current running level
     public List<ScoreData> scores;          //The high score list
     public Text highScoreText;              //The high score display
+    public GameObject gameUI1;              //Player 1's UI screen
+    public GameObject gameUI2;              //Player 2's UI screen
 
 
 

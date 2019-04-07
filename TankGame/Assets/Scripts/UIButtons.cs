@@ -8,7 +8,7 @@ public class UIButtons : MonoBehaviour {
     //Variables
     public Dropdown playerSelect;       //Selects either multiplayer or singleplayer
     public Dropdown mapType;            //Selects the map type
-    public InputField mapSeed;                //Type in custom map seed
+    public InputField mapSeed;          //Type in custom map seed
 
     private LevelGenerator level;       //The level
 
@@ -24,9 +24,13 @@ public class UIButtons : MonoBehaviour {
         {
             case 0:
                 level.multiplayer = false;
+                GameManager.instance.gameUI1.GetComponent<RectTransform>().offsetMin = new Vector2(0, 0);
+                GameManager.instance.gameUI2.SetActive(false);
                 break;
             case 1:
                 level.multiplayer = true;
+                GameManager.instance.gameUI1.GetComponent<RectTransform>().offsetMin = new Vector2(0, -180);
+                GameManager.instance.gameUI2.SetActive(true);
                 break;
         }
 

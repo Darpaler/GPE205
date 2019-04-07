@@ -17,6 +17,7 @@ public class TankData : MonoBehaviour
     public int score;                                              //How Many Points This Tank Has
     public float fireRateModifier = 1;                             //Modifies the shell's reload time
     public string name;
+    public int maxLives;
 
     void Start()
     {

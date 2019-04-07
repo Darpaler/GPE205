@@ -243,7 +243,8 @@ MonoBehaviour:
   pointValue: 3
   score: 0
   fireRateModifier: 1
-  name: 
+  name: Player 2
+  maxLives: 3
 --- !u!114 &114269784052669742
 MonoBehaviour:
   m_ObjectHideFlags: 1

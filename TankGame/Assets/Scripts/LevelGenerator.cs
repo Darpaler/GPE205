@@ -42,13 +42,16 @@ public class LevelGenerator : MonoBehaviour{
 
         if (multiplayer)
         {
+            //Set Cameras
             GameManager.instance.main.rect = new Rect(0, .5f, 1, .5f);
             GameManager.instance.camera2.rect = new Rect(0, 0, 1, .5f);
         }
         else
         {
+            //Set Cameras
             GameManager.instance.main.rect = new Rect(0, 0, 1, 1);
             GameManager.instance.camera2.rect = new Rect(0, 0, 0, 0);
+            //Disable Player 2 Spawn
             playerSpawns[1].enabled = false;
         }
 
@@ -67,6 +70,7 @@ public class LevelGenerator : MonoBehaviour{
     {
         if((playerSpawns[0].isGameOver && playerSpawns[1].isGameOver) || (playerSpawns[0].isGameOver && (!playerSpawns[1].enabled)))
         {
+            //Check for SinglePlayer Game Over, or Both Game Overs
             isGameOver = true;
         }
     }

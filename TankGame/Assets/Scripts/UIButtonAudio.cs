@@ -7,10 +7,9 @@ using UnityEngine.EventSystems;
 public class UIButtonAudio : MonoBehaviour {
 
     //Variables
-    private Button button;
-    private Transform tf;
-    public AudioClip up;
-    public AudioClip down;
+    private Button button;      //The button
+    private Transform tf;       //The transform component
+    public AudioClip down;      //The audio clip
 
 
 	// Use this for initialization
@@ -24,6 +23,7 @@ public class UIButtonAudio : MonoBehaviour {
 
     public void HandleClick()
     {
+        //Play audio
         AudioSource.PlayClipAtPoint(down, tf.position, GameManager.instance.sfxVolume);
     }
 }

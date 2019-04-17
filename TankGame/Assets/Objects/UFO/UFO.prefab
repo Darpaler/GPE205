@@ -264,9 +264,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 940b40a017db161458f4b73e2e70c096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveVolume: 0
-  turnVolume: 0
-  shootVolume: 0
+  moveVolume: 5
+  turnVolume: 3
+  shootVolume: 7.5
   volume: 0
   decayPerFrameDraw: 1
 --- !u!114 &114265505040536588

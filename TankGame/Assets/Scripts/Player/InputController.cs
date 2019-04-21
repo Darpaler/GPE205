@@ -22,7 +22,7 @@ public class InputController: MonoBehaviour
         motor = GetComponent<TankMotor>();
 
         //Set GameManager
-        if(GameManager.instance.player != null)
+        if(GameManager.instance.player != null || GameManager.instance.currentLevelGenerator.playerSpawns[0].isGameOver)
         {
             GameManager.instance.player2 = this;
         }

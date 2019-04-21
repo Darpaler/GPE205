@@ -26,6 +26,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1475815602741304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4539382580019796}
+  - component: {fileID: 82689601133871754}
+  m_Layer: 0
+  m_Name: BGM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1566689145334708
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,6 +75,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!4 &4539382580019796
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1475815602741304}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 561, y: 287.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4885892706948806}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4685095020152640
 Transform:
   m_ObjectHideFlags: 1
@@ -84,6 +113,7 @@ Transform:
   m_Children:
   - {fileID: 4917389153787326}
   - {fileID: 4685095020152640}
+  - {fileID: 4539382580019796}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -100,6 +130,101 @@ Transform:
   m_Father: {fileID: 4885892706948806}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &82689601133871754
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1475815602741304}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 33cffce7b89923943a19cc7c02ffbea9, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &114011510116243754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,9 +245,11 @@ MonoBehaviour:
   - {fileID: 1162291359508388, guid: 3baf770dcc631df4094d4abd20749a4e, type: 2}
   - {fileID: 1890634789872448, guid: 0b49f96bd14480545aa5a5c2e480030a, type: 2}
   - {fileID: 1882938651972710, guid: 5b43d019040733b4eb83b8c18e9aa8c7, type: 2}
-  mapType: 0
-  mapSeed: 2999
-  multiplayer: 1
+  mapType: 2
+  mapSeed: 4444
+  playerSpawns: []
+  multiplayer: 0
+  isGameOver: 0
 --- !u!114 &114771167017330548
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,6 +267,13 @@ MonoBehaviour:
   currentSpawn: {fileID: 0}
   isGenerated: 1
   players: []
+  score: 0
+  lives: 0
+  firstSpawn: 1
+  gameOverScreen: {fileID: 0}
+  gameOverText: {fileID: 0}
+  gameUIText: {fileID: 0}
+  isGameOver: 0
 --- !u!114 &114822723541988280
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -157,3 +291,10 @@ MonoBehaviour:
   currentSpawn: {fileID: 0}
   isGenerated: 1
   players: []
+  score: 0
+  lives: 0
+  firstSpawn: 1
+  gameOverScreen: {fileID: 0}
+  gameOverText: {fileID: 0}
+  gameUIText: {fileID: 0}
+  isGameOver: 0

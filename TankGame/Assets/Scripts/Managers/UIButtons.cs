@@ -11,14 +11,14 @@ public class UIButtons : MonoBehaviour {
     public InputField mapSeed;          //Type in custom map seed
     public Slider volume;               //Volume Slider
     public Slider sfxVolume;            //The SFX Slider
-    private AudioSource bgm;            //The BGM source
+    public List<AudioSource> bgm;       //The BGM source
     private LevelGenerator level;       //The level
 
 	// Use this for initialization
 	void Start () {
         //Get Components
         level = GameManager.instance.level.GetComponent<LevelGenerator>();
-        bgm = GameManager.instance.gameObject.GetComponent<AudioSource>();
+
     }
 	
 	// Update is called once per frame
@@ -30,15 +30,16 @@ public class UIButtons : MonoBehaviour {
                 //Set Multiplayer
                 level.multiplayer = false;
                 //Set Screens
-                GameManager.instance.gameUI1.GetComponent<RectTransform>().offsetMin = new Vector2(0, -360);
+                GameManager.instance.gameUI1.GetComponent<RectTransform>().sizeDelta = new Vector2(0, (Screen.height));
                 GameManager.instance.gameUI2.SetActive(false);
                 break;
             case 1:
                 //Set Multiplayer
                 level.multiplayer = true;
                 //Set Screens
-                GameManager.instance.gameUI1.GetComponent<RectTransform>().offsetMin = new Vector2(0, -180);
+                GameManager.instance.gameUI1.GetComponent<RectTransform>().sizeDelta = new Vector2(0, Screen.height/2);
                 GameManager.instance.gameUI2.SetActive(true);
+                GameManager.instance.gameUI2.GetComponent<RectTransform>().sizeDelta = new Vector2(0, Screen.height/2);
                 break;
         }
         switch (mapType.value)
@@ -63,6 +64,9 @@ public class UIButtons : MonoBehaviour {
         }
         //Set volume sliders
         GameManager.instance.sfxVolume = sfxVolume.value;
-        bgm.volume = volume.value; 
+        for(int i = 0; i < bgm.Count; i++)
+        {
+            bgm[i].volume = volume.value;
+        }
 	}
 }

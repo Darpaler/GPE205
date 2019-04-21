@@ -14,7 +14,7 @@ public class LevelGenerator : MonoBehaviour{
     public enum MapType { mapOfTheDay, random, custom};     //What seed to use for the map
     public MapType mapType;                                 //The current type of seed to use
     public int mapSeed;                                     //The seed for the randomly generated level
-    private SpawnPlayer[] playerSpawns;                     //SpawnPlayer Component
+    public SpawnPlayer[] playerSpawns;                     //SpawnPlayer Component
     public bool multiplayer = false;                        //Whether or not there are two players
     public bool isGameOver = false;
 

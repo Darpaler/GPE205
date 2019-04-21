@@ -162,12 +162,12 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2005957496}
-    - target: {fileID: 33525332723730436, guid: 5b43d019040733b4eb83b8c18e9aa8c7,
+    - target: {fileID: 64970311850011786, guid: 5b43d019040733b4eb83b8c18e9aa8c7,
         type: 2}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 524303757}
-    - target: {fileID: 64970311850011786, guid: 5b43d019040733b4eb83b8c18e9aa8c7,
+    - target: {fileID: 33525332723730436, guid: 5b43d019040733b4eb83b8c18e9aa8c7,
         type: 2}
       propertyPath: m_Mesh
       value: 
@@ -251,7 +251,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-1674
+  m_Name: pb_Mesh-233276
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -448,7 +448,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-1092
+  m_Name: pb_Mesh-232670
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -693,11 +693,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  player2: {fileID: 0}
   main: {fileID: 2040517070}
+  camera2: {fileID: 0}
   cameraFollow: {fileID: 0}
+  camera2Follow: {fileID: 0}
   enemies: []
   pickUps: []
   weapons: []
+  mainMenu: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  optionsMenu: {fileID: 0}
+  level: {fileID: 0}
+  currentLevel: {fileID: 0}
+  scores: []
+  highScoreText: {fileID: 0}
+  gameUI1: {fileID: 0}
+  gameUI2: {fileID: 0}
+  currentLevelGenerator: {fileID: 0}
+  restart: {fileID: 0}
+  sfxVolume: 1
 --- !u!4 &789565034
 Transform:
   m_ObjectHideFlags: 0
@@ -716,7 +731,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-1496
+  m_Name: pb_Mesh-233098
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -909,7 +924,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &969318863
 Transform:
   m_ObjectHideFlags: 0
@@ -944,12 +959,20 @@ MonoBehaviour:
   playerSpawns: []
   currentSpawn: {fileID: 0}
   isGenerated: 0
+  players: []
+  score: 0
+  lives: 0
+  firstSpawn: 1
+  gameOverScreen: {fileID: 0}
+  gameOverText: {fileID: 0}
+  gameUIText: {fileID: 0}
+  isGameOver: 0
 --- !u!43 &971148380
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-1320
+  m_Name: pb_Mesh-232922
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1171,7 +1194,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-1318
+  m_Name: pb_Mesh-232920
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1383,7 +1406,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-1090
+  m_Name: pb_Mesh-232668
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1538,7 +1561,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-1498
+  m_Name: pb_Mesh-233100
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2

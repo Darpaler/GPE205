@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour {
     private string p1Name;                          //Player 1's end name
     private int p2Score;                            //Player 2's end score
     private string p2Name;                          //Player 2's end name
+    private UIButtons uiButtons;                    //The UI Buttons Component
 
 
     // Runs before any Start() functions run
@@ -54,7 +55,7 @@ public class GameManager : MonoBehaviour {
         //Get Components
         cameraFollow = main.GetComponent<FollowGameObject>();
         camera2Follow = camera2.GetComponent<FollowGameObject>();
-
+        uiButtons = GetComponent<UIButtons>();
         //Load Save Data
         Load();
 
@@ -108,7 +109,11 @@ public class GameManager : MonoBehaviour {
         main.gameObject.transform.parent = instance.transform;
         camera2.gameObject.transform.parent = instance.transform;
         //Destroy the level
-        Destroy(currentLevel);
+        if(currentLevel != null)
+        {
+            uiButtons.bgm.Remove(currentLevel.GetComponentInChildren<AudioSource>());
+            Destroy(currentLevel);
+        }
         //Hide other screens
         pauseMenu.SetActive(false);
         mainMenu.SetActive(true);
@@ -135,6 +140,7 @@ public class GameManager : MonoBehaviour {
         {
             //Make one
             currentLevel = Instantiate(level);
+            uiButtons.bgm.Add(currentLevel.GetComponentInChildren<AudioSource>());
             currentLevelGenerator = currentLevel.GetComponent<LevelGenerator>();
             restart.SetActive(false);
         }
@@ -149,6 +155,9 @@ public class GameManager : MonoBehaviour {
     }
     public void Save()
     {
+        //Save Sound
+        PlayerPrefs.SetFloat("BGM", uiButtons.volume.value);
+        PlayerPrefs.SetFloat("SFX", uiButtons.sfxVolume.value);
         //Add both player's scores
         scores.Add(new ScoreData(p1Name, p1Score));
         scores.Add(new ScoreData(p2Name, p2Score));
@@ -177,6 +186,9 @@ public class GameManager : MonoBehaviour {
     }
     public void Load()
     {
+        //Get Sound
+        uiButtons.volume.value = PlayerPrefs.GetFloat("BGM");
+        uiButtons.sfxVolume.value = PlayerPrefs.GetFloat("SFX");
         scores.Clear();
         //Get the list of scores
         for (int i = 0; i < 3; i++)

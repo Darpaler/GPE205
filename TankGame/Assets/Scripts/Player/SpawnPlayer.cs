@@ -68,7 +68,7 @@ public class SpawnPlayer : Spawn {
                 
                 //Spawn it and set the next time
                 spawnedObject = Instantiate(prefab, currentSpawn.transform.position, currentSpawn.transform.rotation) as GameObject;
-                if (players[0].transform.childCount == 0)
+                if (players[0].transform.childCount == 0 && !(GameManager.instance.currentLevelGenerator.playerSpawns[0].isGameOver))
                 {
                     //If theres no player 1 spawn, spawn for player 1
                     spawnedObject.transform.parent = players[0].transform;
